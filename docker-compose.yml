@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web-test:
+    build: .
+    image: my-web-test:v1
+    container_name: web-test-container
+    ports:
+      - "8081:80"
+    restart: always
