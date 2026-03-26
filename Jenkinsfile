@@ -27,11 +27,11 @@ pipeline {
                         // 4. Build lại image mới (không dùng cache để đảm bảo code mới nhất)
                         // 5. Chạy container mới ở chế độ nền (-d)
                         sshCommand remote: remote, command: """
-                            cd ${env.PROJECT_DIR} && \
-                            git pull origin main && \
-                            docker-compose down && \
-                            docker-compose build --no-cache && \
-                            docker-compose up -d
+                            sudo cd ${env.PROJECT_DIR} && \
+                            sudo git pull origin main && \
+                            sudo docker-compose down && \
+                            sudo docker-compose build --no-cache && \
+                            sudo docker-compose up -d
                         """
                     }
                 }
