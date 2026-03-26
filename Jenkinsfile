@@ -4,7 +4,7 @@ pipeline {
         // ID của Credentials (User/Pass) bạn đã tạo trong Jenkins
         VM_AUTH = 'vm-password-char'
         VM_IP = '192.168.183.101' // Thay bằng IP máy ảo của bạn
-        VM_USER = 'root'
+        VM_USER = 'reatimo'
         PROJECT_DIR = '/root/jenkins-demo'
     }
     stages {
